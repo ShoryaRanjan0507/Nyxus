@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { readDb } from '@/lib/db';
+import { getUsers } from '@/lib/db';
 
 export async function POST(req: Request) {
   try {
@@ -9,8 +9,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Username and password required' }, { status: 400 });
     }
 
-    const db = await readDb();
-    const user = db.users.find(u => u.username === username && u.password === password);
+    const users = await getUsers();
+    const user = users.find(u => u.username === username && u.password === password);
 
     if (!user) {
       return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 });

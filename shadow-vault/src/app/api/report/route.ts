@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { readDb, writeDb } from '@/lib/db';
+import { addSafetyLog } from '@/lib/db';
 
 export async function POST(req: Request) {
   try {
@@ -9,18 +9,13 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
     }
 
-    const db = await readDb();
-
     // Push to safetyLogs so it shows up in Dev Dashboard
-    const log = {
+    await addSafetyLog({
       timestamp: Date.now(),
       username: reportedId,
       message: `[USER REPORTED]: ${reason}`,
       communityId: `Reported by ${reporter}`
-    };
-
-    db.safetyLogs.push(log);
-    await writeDb(db);
+    });
 
     return NextResponse.json({ success: true });
   } catch (error) {

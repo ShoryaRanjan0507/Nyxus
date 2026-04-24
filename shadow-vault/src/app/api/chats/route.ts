@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { readDb, writeDb } from '@/lib/db';
+import { readDb, savePhantomChat, savePermanentChat } from '@/lib/db';
 
 // Helper to generate 6 digit OTP
 const generateOtp = () => Math.floor(100000 + Math.random() * 900000).toString();
@@ -18,17 +18,12 @@ export async function GET(req: Request) {
     }
 
     const now = Date.now();
-
-    // Clean up expired phantom chats lazily
+    // Filter expired chats locally for now, since readDb already fetched them
     const activePhantomChats = db.phantomChats.filter(chat => chat.expiresAt > now);
-    if (activePhantomChats.length !== db.phantomChats.length) {
-      db.phantomChats = activePhantomChats;
-      await writeDb(db);
-    }
 
     return NextResponse.json({
       permanentChats: db.permanentChats,
-      phantomChats: db.phantomChats
+      phantomChats: activePhantomChats
     });
   } catch (error) {
     return NextResponse.json({ error: 'Internal error' }, { status: 500 });
@@ -65,8 +60,7 @@ export async function POST(req: Request) {
         bannedUsers: []
       };
 
-      db.phantomChats.push(newChat);
-      await writeDb(db);
+      await savePhantomChat(newChat);
       return NextResponse.json({ chat: newChat });
 
     } else if (type === 'permanent') {
@@ -82,8 +76,7 @@ export async function POST(req: Request) {
         members: []
       };
 
-      db.permanentChats.push(newChat);
-      await writeDb(db);
+      await savePermanentChat(newChat);
       return NextResponse.json({ chat: newChat });
     }
 

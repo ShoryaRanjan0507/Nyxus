@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { readDb, writeDb } from '@/lib/db';
+import { addFeedback } from '@/lib/db';
 
 export async function POST(req: Request) {
   try {
@@ -9,18 +9,11 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
     }
 
-    const db = await readDb();
-
-    // ensure feedbacks array exists
-    if (!db.feedbacks) db.feedbacks = [];
-
-    db.feedbacks.push({
+    await addFeedback({
       timestamp: Date.now(),
       username,
       text
     });
-
-    await writeDb(db);
 
     return NextResponse.json({ success: true });
   } catch (error) {

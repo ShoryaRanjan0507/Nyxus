@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { readDb, writeDb } from '@/lib/db';
+import { getPhantomChat, savePhantomChat, getUsers, addSafetyLog } from '@/lib/db';
 
 const BAD_WORDS = ['badword', 'spam', 'hate', 'nsfw', 'toxic', 'cocaine', 'heroin', 'murder', 'fraud', 'steal', 'hack', 'exploit', 'illegal', 'crime', 'narcotics', 'meth', 'weapon', 'human trafficking', 'drugs', 'drug', 'rape', 'terrorist', 'terror', 'bomb', 'terror attack', 'child porn', 'child abuse'];
 
@@ -11,9 +11,8 @@ export async function GET(
     const { id } = await params;
     const url = new URL(req.url);
     const otp = url.searchParams.get('otp');
-    const db = await readDb();
-
-    const chat = db.phantomChats.find(c => c.id === id);
+    
+    const chat = await getPhantomChat(id);
     if (!chat) return NextResponse.json({ error: 'Chat not found' }, { status: 404 });
 
     if (Date.now() > chat.expiresAt) {
@@ -37,12 +36,9 @@ export async function POST(
   try {
     const { id } = await params;
     const { action, sender, text, banUsername } = await req.json();
-    const db = await readDb();
     
-    const chatIndex = db.phantomChats.findIndex(c => c.id === id);
-    if (chatIndex === -1) return NextResponse.json({ error: 'Chat not found' }, { status: 404 });
-
-    const chat = db.phantomChats[chatIndex];
+    const chat = await getPhantomChat(id);
+    if (!chat) return NextResponse.json({ error: 'Chat not found' }, { status: 404 });
     
     if (Date.now() > chat.expiresAt) {
         return NextResponse.json({ error: 'Chat has expired.' }, { status: 410 });
@@ -53,7 +49,8 @@ export async function POST(
     }
 
     if (action === 'send') {
-      const user = db.users.find((u: any) => u.username === sender);
+      const users = await getUsers();
+      const user = users.find((u: any) => u.username === sender);
       const isPremium = user?.plan === 'premium' || user?.role === 'dev';
 
       const lowerText = text.toLowerCase();
@@ -66,8 +63,7 @@ export async function POST(
           message: text,
           communityId: `Phantom-${chat.id.slice(-6)}`
         };
-        db.safetyLogs.push(log);
-        await writeDb(db);
+        await addSafetyLog(log);
 
         console.log('\n--- SAFETY API ALERT (PHANTOM) ---');
         console.log(`[${new Date(log.timestamp).toLocaleString()}]`);
@@ -92,8 +88,7 @@ export async function POST(
       }
     }
 
-    db.phantomChats[chatIndex] = chat;
-    await writeDb(db);
+    await savePhantomChat(chat);
 
     return NextResponse.json({ success: true, chat });
   } catch (error) {

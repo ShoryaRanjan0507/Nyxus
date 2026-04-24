@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { readDb, writeDb } from '@/lib/db';
+import { getUsers, saveUser } from '@/lib/db';
 
 export async function POST(req: Request) {
   try {
@@ -9,8 +9,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Username and password required' }, { status: 400 });
     }
 
-    const db = await readDb();
-    if (db.users.find(u => u.username === username)) {
+    const users = await getUsers();
+    if (users.find(u => u.username === username)) {
       return NextResponse.json({ error: 'Username already exists' }, { status: 400 });
     }
 
@@ -18,12 +18,11 @@ export async function POST(req: Request) {
     const newUser = {
       username,
       password, // Plain text for prototype only
-      role: isDev ? 'dev' : 'user',
+      role: (isDev ? 'dev' : 'user') as 'dev' | 'user',
       isBanned: false
-    } as const;
+    };
 
-    db.users.push(newUser);
-    await writeDb(db);
+    await saveUser(newUser);
 
     return NextResponse.json({ message: 'User created' });
   } catch (error) {
