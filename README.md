@@ -6,7 +6,7 @@
 
 ## ⚡ Core Features
 
-### 👻 Phantom Vaults (Ephemeral)
+###  Phantom Vaults
 - Create temporary chat rooms with a self-destruct timer.
 - Secured by a unique **6-digit One-Time Passcode (OTP)** generated upon creation.
 - Zero trace: Once the timer hits zero, the room and its messages are purged from the memory buffers.
