@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛡️ SHADOW VAULT
 
-## Getting Started
+**SHADOW VAULT** is a high-fidelity, cyber-themed communication platform designed for privacy, ephemerality, and secure collaboration. Built with **Next.js 15**, **Framer Motion**, and **Lucide React**, it offers a premium user experience with zero-trace architecture and real-time moderation.
 
-First, run the development server:
+![Shadow Vault Banner](https://raw.githubusercontent.com/ShoryaRanjan0507/ShadowVault/main/public/banner.png) *(Note: Add your own banner image here)*
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚡ Core Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 👻 Phantom Vaults (Ephemeral)
+- Create temporary chat rooms with a self-destruct timer.
+- Secured by a unique **6-digit One-Time Passcode (OTP)** generated upon creation.
+- Zero trace: Once the timer hits zero, the room and its messages are purged from the memory buffers.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🏛️ Permanent Vaults (Maker Control)
+- Persistent chat rooms for long-term operations.
+- Full moderation tools for the vault creator (The Maker).
+- Secure membership management and ban protocols.
 
-## Learn More
+### 🛡️ Safety API & Moderation
+- Real-time heuristic filtering to intercept illegal or malicious transmissions.
+- Integrated **Dev Dashboard** for platform-wide moderation.
+- Automated banishment protocols for repeated safety violations.
 
-To learn more about Next.js, take a look at the following resources:
+### 📧 Shadow Support Node
+- Integrated encrypted support channel (`Help & Support`).
+- Queries are transmitted directly to the administrative panel for technical operative review.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Design Philosophy
 
-## Deploy on Vercel
+Shadow Vault follows a **Cyber-Glassmorphism** aesthetic:
+- **Dark Mode First**: Deep `#050508` backgrounds with purple and fuchsia accents.
+- **Micro-Animations**: Powered by Framer Motion for scroll-triggered scaling and entry transitions.
+- **Professional Iconography**: Leveraging the full Lucide React vector library for a sleek, mature look.
+- **Zero Browser Defaults**: Every alert, modal, and confirmation is custom-built to ensure a cohesive, immersive experience.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Database**: Local JSON Storage (Scalable to PostgreSQL/Prisma)
+- **Deployment**: Optimized for [Vercel](https://vercel.com/)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18.x or higher
+- npm / yarn / pnpm
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ShoryaRanjan0507/ShadowVault.git
+   cd ShadowVault
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Access the Vault:**
+   Open [http://localhost:3000](http://localhost:3000) in your secure browser.
+
+---
+
+## 👨‍💻 Developer Panel
+
+Administrative access is restricted to users with the `dev` role. The panel allows:
+- Monitoring of Safety API logs.
+- Bulk banishment of violators.
+- Reviewing inbound Support Transmissions and User Feedback.
+
+---
+
+## 📜 License
+
+This project is part of the **Shadow Vault Protocol**. All automated rights reserved.
+
+---
+
+> **"In the shadows, silence is security."** 🌑
