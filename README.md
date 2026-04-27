@@ -2,11 +2,13 @@
 
 **NYXUS** is a high-fidelity, cyber-themed communication platform designed for privacy, ephemerality, and secure collaboration. Built with **Next.js 15**, **Framer Motion**, and **Lucide React**, it offers a premium user experience with zero-trace architecture and real-time moderation.
 
+![Nyxus Banner](https://raw.githubusercontent.com/ShoryaRanjan0507/ShadowVault/main/public/banner.png) *(Note: Add your own banner image here)*
+
 ---
 
 ## ⚡ Core Features
 
-###  Phantom Vaults
+### 👻 Phantom Vaults (Ephemeral)
 - Create temporary chat rooms with a self-destruct timer.
 - Secured by a unique **6-digit One-Time Passcode (OTP)** generated upon creation.
 - Zero trace: Once the timer hits zero, the room and its messages are purged from the memory buffers.
@@ -58,8 +60,8 @@ Nyxus follows a **Cyber-Glassmorphism** aesthetic:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/ShoryaRanjan0507/Nyxus.git
-   cd nyxus
+   git clone https://github.com/ShoryaRanjan0507/ShadowVault.git
+   cd ShadowVault
    ```
 
 2. **Install dependencies:**
