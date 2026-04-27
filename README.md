@@ -2,7 +2,6 @@
 
 **NYXUS** is a high-fidelity, cyber-themed communication platform designed for privacy, ephemerality, and secure collaboration. Built with **Next.js 15**, **Framer Motion**, and **Lucide React**, it offers a premium user experience with zero-trace architecture and real-time moderation.
 
-![Nyxus Banner](https://raw.githubusercontent.com/ShoryaRanjan0507/ShadowVault/main/public/banner.png) *(Note: Add your own banner image here)*
 
 ---
 
