@@ -18,7 +18,7 @@ export async function POST(req: Request) {
     user.isBanned = true;
     await saveUser(user);
 
-    return NextResponse.json({ success: true, message: `User ${username} has been globally banned from Shadow Vault.` });
+    return NextResponse.json({ success: true, message: `User ${username} has been globally banned from Nyxus.` });
   } catch (error) {
     return NextResponse.json({ error: 'Internal API Error' }, { status: 500 });
   }

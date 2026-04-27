@@ -13,7 +13,7 @@ export async function GET(req: Request) {
     if (username) {
         const user = db.users.find(u => u.username === username);
         if (user && user.isBanned) {
-             return NextResponse.json({ error: 'You are permanently banned from Shadow Vault.' }, { status: 403 });
+             return NextResponse.json({ error: 'You are permanently banned from Nyxus.' }, { status: 403 });
         }
     }
 
@@ -38,7 +38,7 @@ export async function POST(req: Request) {
     if (creator) {
         const user = db.users.find(u => u.username === creator);
         if (user && user.isBanned) {
-            return NextResponse.json({ error: 'You are permanently banned from Shadow Vault.' }, { status: 403 });
+            return NextResponse.json({ error: 'You are permanently banned from Nyxus.' }, { status: 403 });
         }
     }
 

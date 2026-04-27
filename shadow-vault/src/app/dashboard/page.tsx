@@ -111,7 +111,7 @@ export default function Dashboard() {
     router.push("/");
   };
 
-  if (!user) return <div className="min-h-screen bg-[#050508] flex items-center justify-center text-zinc-500">Loading Vault...</div>;
+  if (!user) return <div className="min-h-screen bg-[#050508] flex items-center justify-center text-zinc-500">Loading Nyxus...</div>;
 
   return (
     <div className="min-h-screen bg-[#050508] p-8 text-zinc-200">
@@ -120,7 +120,7 @@ export default function Dashboard() {
         <header className="flex justify-between items-end border-b border-purple-900/40 pb-6">
           <div>
             <h1 className="text-3xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-600">
-              SHADOW VAULT
+              NYXUS
             </h1>
             <p className="text-purple-400 mt-1">Logged in as <span className="text-white font-bold">{user.username}</span> {user.role === 'dev' && <span className="bg-red-900/50 text-red-400 text-xs px-2 py-1 rounded ml-2">DEV</span>}</p>
           </div>

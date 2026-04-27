@@ -24,7 +24,7 @@ export default function SupportPage() {
       });
 
       if (res.ok) {
-        setStatus("Your transmission has been received by Shadow Command. We will respond if necessary.");
+        setStatus("Your transmission has been received by Nyxus Command. We will respond if necessary.");
         setEmail("");
         setSubject("");
         setMessage("");
@@ -43,7 +43,7 @@ export default function SupportPage() {
       <nav className="fixed w-full z-50 glass-panel backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <Link href="/" className="font-black text-2xl tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-500">
-            SHADOW VAULT
+            NYXUS
           </Link>
           <Link href="/" className="text-xs uppercase tracking-widest font-semibold text-zinc-400 hover:text-fuchsia-400 transition-colors">
             Back to Grid
@@ -52,34 +52,34 @@ export default function SupportPage() {
       </nav>
 
       <main className="pt-32 pb-20 px-6 max-w-4xl mx-auto">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-black text-white tracking-tighter mb-4">SHADOW SUPPORT</h1>
+          <h1 className="text-5xl font-black text-white tracking-tighter mb-4">NYXUS SUPPORT</h1>
           <p className="text-zinc-400 text-lg">Encrypted communication channel with our technical operative nodes.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-12">
           <div className="space-y-8">
             <div>
-               <h3 className="text-fuchsia-400 font-bold uppercase tracking-widest text-xs mb-4">Contact Protocols</h3>
-               <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-sm text-zinc-300">
-                     <Mail className="w-4 h-4 text-purple-500" />
-                     formywork387@gmail.com
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-zinc-300">
-                     <MessageSquare className="w-4 h-4 text-purple-500" />
-                     Encrypted Direct Channel
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-zinc-300">
-                     <ShieldCheck className="w-4 h-4 text-purple-500" />
-                     256-bit AES Submissions
-                  </div>
-               </div>
+              <h3 className="text-fuchsia-400 font-bold uppercase tracking-widest text-xs mb-4">Contact Protocols</h3>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 text-sm text-zinc-300">
+                  <Mail className="w-4 h-4 text-purple-500" />
+                  formywork387@gmail.com
+                </div>
+                <div className="flex items-center gap-3 text-sm text-zinc-300">
+                  <MessageSquare className="w-4 h-4 text-purple-500" />
+                  Encrypted Direct Channel
+                </div>
+                <div className="flex items-center gap-3 text-sm text-zinc-300">
+                  <ShieldCheck className="w-4 h-4 text-purple-500" />
+                  256-bit AES Submissions
+                </div>
+              </div>
             </div>
           </div>
 

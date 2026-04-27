@@ -17,7 +17,7 @@ export async function POST(req: Request) {
       status: 'open'
     });
 
-    return NextResponse.json({ success: true, message: 'Query received by Shadow Command.' });
+    return NextResponse.json({ success: true, message: 'Query received by Nyxus Command.' });
   } catch (error) {
     return NextResponse.json({ error: 'Internal system error' }, { status: 500 });
   }

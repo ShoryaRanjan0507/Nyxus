@@ -17,7 +17,7 @@ export async function POST(req: Request) {
     }
 
     if (user.isBanned) {
-      return NextResponse.json({ error: 'You are permanently banned from Shadow Vault.' }, { status: 403 });
+      return NextResponse.json({ error: 'You are permanently banned from Nyxus.' }, { status: 403 });
     }
 
     return NextResponse.json({ message: 'Logged in', user: { username: user.username, role: user.role } });

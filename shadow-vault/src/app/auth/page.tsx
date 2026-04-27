@@ -9,6 +9,7 @@ export default function AuthPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -22,6 +23,7 @@ export default function AuthPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
+    setStatus("");
     setLoading(true);
 
     const endpoint = isLogin ? "/api/auth/login" : "/api/auth/register";
@@ -44,7 +46,7 @@ export default function AuthPage() {
         router.push("/dashboard");
       } else {
         setIsLogin(true);
-        setError("Identity Registered! Please access the vault.");
+        setStatus("Identity Registered! Please access the Nyxus terminal.");
       }
     } catch (err: any) {
       setError(err.message);
@@ -64,7 +66,7 @@ export default function AuthPage() {
       <div className="w-full max-w-md p-8 rounded-2xl glass-panel shadow-2xl relative z-10 transition-all">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-600 tracking-widest drop-shadow-[0_0_15px_rgba(147,51,234,0.5)]">
-            SHADOW VAULT
+            NYXUS
           </h1>
           <p className="text-purple-400/60 text-xs mt-2 uppercase tracking-[0.2em]">Secure Terminal</p>
         </div>
@@ -91,9 +93,9 @@ export default function AuthPage() {
              />
           </div>
 
-          {error && (
-            <div className="border border-rose-900/50 bg-rose-950/30 text-rose-400 text-xs font-semibold p-3 rounded-lg text-center backdrop-blur-sm animate-pulse">
-              {error}
+          {(error || status) && (
+            <div className={`border ${error ? "border-rose-900/50 bg-rose-950/30 text-rose-400" : "border-emerald-900/50 bg-emerald-950/30 text-emerald-400"} text-xs font-semibold p-3 rounded-lg text-center backdrop-blur-sm animate-pulse`}>
+              {error || status}
             </div>
           )}
 

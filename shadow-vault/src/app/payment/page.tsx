@@ -7,7 +7,7 @@ export default function PaymentMock() {
         <div className="bg-zinc-100 px-6 py-4 border-b border-zinc-200 flex justify-between items-center">
            <div className="font-bold text-lg flex items-center gap-2">
              <div className="w-6 h-6 bg-purple-600 rounded"></div>
-             Shadow Vault
+             Nyxus
            </div>
            <div className="text-xl font-bold">$299.00</div>
         </div>

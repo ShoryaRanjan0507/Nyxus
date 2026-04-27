@@ -117,7 +117,7 @@ export default function UserDropdown() {
           )}
 
           <Link href="/dashboard" className="block px-4 py-2 text-zinc-300 hover:bg-fuchsia-900/30 hover:text-fuchsia-300 transition-colors">
-            Vault Dashboard
+            Nyxus Dashboard
           </Link>
           <Link href="/checkout" className="block px-4 py-2 text-zinc-300 hover:bg-fuchsia-900/30 hover:text-fuchsia-300 transition-colors">
             Upgrade Premium
@@ -156,7 +156,7 @@ export default function UserDropdown() {
                  value={feedbackText}
                  onChange={(e) => setFeedbackText(e.target.value)}
                  className="w-full bg-zinc-900/80 border border-zinc-700 rounded p-3 text-zinc-200 outline-none focus:border-fuchsia-500 min-h-[100px] mb-4"
-                 placeholder="How can we improve Shadow Vault?"
+                 placeholder="How can we improve Nyxus?"
               ></textarea>
               <div className="flex justify-end gap-3">
                  <button onClick={() => setShowFeedbackModal(false)} className="px-4 py-2 text-zinc-400 hover:text-white transition-colors">Cancel</button>

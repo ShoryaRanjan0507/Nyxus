@@ -25,7 +25,7 @@ export default function LandingPage() {
       <nav className="fixed w-full z-50 glass-panel border-b-0 border-purple-900/10 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="font-black text-2xl tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-500 hover:drop-shadow-[0_0_10px_rgba(217,70,239,0.8)] transition-all cursor-default">
-            SHADOW VAULT
+            NYXUS
           </div>
           <div className="hidden md:flex gap-8 text-xs uppercase tracking-widest font-semibold text-zinc-400">
              <a href="#features" className="hover:text-fuchsia-400 transition-colors">Features</a>
@@ -55,7 +55,7 @@ export default function LandingPage() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-6xl md:text-8xl font-black text-white tracking-tighter mb-8 leading-tight"
           >
-             Total Privacy. <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-fuchsia-500 to-purple-500 animate-gradient-x drop-shadow-[0_0_20px_rgba(217,70,239,0.4)]">Zero Trace.</span>
+             Nyxus Privacy. <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-fuchsia-500 to-purple-500 animate-gradient-x drop-shadow-[0_0_20px_rgba(217,70,239,0.4)]">Zero Trace.</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -75,7 +75,7 @@ export default function LandingPage() {
                INITIALIZE CONNECTION
              </Link>
              <a href="#features" className="px-8 py-4 bg-zinc-900/40 border border-zinc-700/50 hover:border-purple-500/50 hover:bg-zinc-800/80 text-zinc-300 font-bold tracking-widest text-sm rounded-lg transition-all backdrop-blur-md">
-               VIEW PROTOCOLS
+               NYXUS PROTOCOLS
              </a>
           </motion.div>
         </section>
@@ -143,7 +143,7 @@ export default function LandingPage() {
         {/* CUSTOMER REVIEWS */}
         <section id="reviews" className="py-32 bg-black/60 border-y border-purple-900/20 relative">
           <div className="max-w-7xl mx-auto px-6">
-             <h2 className="text-4xl md:text-5xl font-black mb-16 px-4 border-l-4 border-fuchsia-600">VOICES FROM THE SHADOWS</h2>
+             <h2 className="text-4xl md:text-5xl font-black mb-16 px-4 border-l-4 border-fuchsia-600">VOICES FROM THE NYXUS</h2>
              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
                   { user: "Cipher_X", text: "The timed annihilation feature on Phantom chats is flawless. Best tool we've used in years." },
@@ -235,7 +235,7 @@ export default function LandingPage() {
       <footer className="border-t border-purple-900/30 bg-black pt-16 pb-8 relative z-10">
          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 mb-12">
             <div className="col-span-2">
-               <h3 className="font-black text-2xl tracking-widest text-fuchsia-500 mb-4">SHADOW VAULT</h3>
+               <h3 className="font-black text-2xl tracking-widest text-fuchsia-500 mb-4">NYXUS</h3>
                <p className="text-zinc-500 text-sm max-w-sm">Providing absolute asynchronous anonymity since inception. Secure your data, leave no footprints, build communities in the shadows.</p>
             </div>
             <div>
@@ -256,7 +256,7 @@ export default function LandingPage() {
             </div>
          </div>
          <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-zinc-900 text-center text-zinc-600 text-xs flex flex-col md:flex-row justify-between items-center">
-            <p>© {new Date().getFullYear()} SHADOW VAULT PROTOCOL. All automated rights reserved.</p>
+            <p>© {new Date().getFullYear()} NYXUS PROTOCOL. All automated rights reserved.</p>
             <div className="flex gap-4 mt-4 md:mt-0">
                <span className="hover:text-zinc-400 cursor-pointer">Privacy Policy</span>
                <span className="hover:text-zinc-400 cursor-pointer">Terms of Service</span>

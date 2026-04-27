@@ -82,7 +82,7 @@ export default function DevDashboard() {
           <main className="grid grid-cols-1 md:grid-cols-2 gap-8">
              <section className="bg-black/60 border border-red-900/30 rounded-xl p-6">
                 <h2 className="text-xl font-bold text-red-400 mb-4">Global Execution</h2>
-                <p className="text-xs text-zinc-400 mb-6 font-mono">Permanently ban any user identity from the Shadow Vault network.</p>
+                <p className="text-xs text-zinc-400 mb-6 font-mono">Permanently ban any user identity from the Nyxus network.</p>
                 <form onSubmit={handleBan} className="flex gap-2">
                    <input type="text" value={banInput} onChange={e => setBanInput(e.target.value)} placeholder="Target Username" className="flex-1 bg-zinc-900 border border-red-900/50 rounded lg px-4 py-2 text-sm outline-none text-white focus:border-red-500" />
                    <button type="submit" className="bg-red-600 hover:bg-red-500 text-white font-bold px-6 py-2 rounded">EXECUTE BAN</button>
