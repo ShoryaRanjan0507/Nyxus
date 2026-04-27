@@ -1,6 +1,6 @@
-# 🛡️ SHADOW VAULT
+# 🌌 NYXUS
 
-**SHADOW VAULT** is a high-fidelity, cyber-themed communication platform designed for privacy, ephemerality, and secure collaboration. Built with **Next.js 15**, **Framer Motion**, and **Lucide React**, it offers a premium user experience with zero-trace architecture and real-time moderation.
+**NYXUS** is a high-fidelity, cyber-themed communication platform designed for privacy, ephemerality, and secure collaboration. Built with **Next.js 15**, **Framer Motion**, and **Lucide React**, it offers a premium user experience with zero-trace architecture and real-time moderation.
 
 ---
 
@@ -29,7 +29,7 @@
 
 ## 🎨 Design Philosophy
 
-Shadow Vault follows a **Cyber-Glassmorphism** aesthetic:
+Nyxus follows a **Cyber-Glassmorphism** aesthetic:
 - **Dark Mode First**: Deep `#050508` backgrounds with purple and fuchsia accents.
 - **Micro-Animations**: Powered by Framer Motion for scroll-triggered scaling and entry transitions.
 - **Professional Iconography**: Leveraging the full Lucide React vector library for a sleek, mature look.
@@ -58,8 +58,8 @@ Shadow Vault follows a **Cyber-Glassmorphism** aesthetic:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/ShoryaRanjan0507/ShadowVault.git
-   cd shadow-vault
+   git clone https://github.com/ShoryaRanjan0507/Nyxus.git
+   cd nyxus
    ```
 
 2. **Install dependencies:**
@@ -88,8 +88,8 @@ Administrative access is restricted to users with the `dev` role. The panel allo
 
 ## 📜 License
 
-This project is part of the **Shadow Vault Protocol**. All automated rights reserved.
+This project is part of the **Nyxus Protocol**. All automated rights reserved.
 
 ---
 
-> **"In the shadows, silence is security."** 🌑
+> **"In the void, silence is security."** 🌑
