@@ -153,7 +153,7 @@ export default function LandingPage() {
                 ].map((r, i) => (
                   <div key={i} className="bg-zinc-900/40 p-6 border border-zinc-800 rounded-lg hover:border-fuchsia-500/30 hover:bg-zinc-800/60 transition-all cursor-default">
                      <div className="flex text-fuchsia-500 mb-4 text-lg">★★★★★</div>
-                     <p className="text-zinc-300 text-sm leading-relaxed italic mb-6">"{r.text}"</p>
+                     <p className="text-zinc-300 text-sm leading-relaxed italic mb-6">&quot;{r.text}&quot;</p>
                      <p className="text-xs font-mono text-fuchsia-400 font-bold">— {r.user}</p>
                   </div>
                 ))}

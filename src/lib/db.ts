@@ -142,9 +142,9 @@ export async function readDb(): Promise<Database> {
     users: users.map(u => ({
       username: u.username,
       password: u.password,
-      role: u.role as any,
+      role: u.role as 'user' | 'dev',
       isBanned: u.is_banned,
-      plan: u.plan as any
+      plan: u.plan as 'free' | 'premium'
     })),
     phantomChats: phantomChats.map(c => ({
       id: c.id,
@@ -179,7 +179,7 @@ export async function readDb(): Promise<Database> {
       email: q.email,
       subject: q.subject,
       message: q.message,
-      status: q.status as any
+      status: q.status as 'open' | 'resolved'
     }))
   };
 }
@@ -198,9 +198,9 @@ export async function getUsers() {
   return rows.map(u => ({
     username: u.username,
     password: u.password,
-    role: u.role as any,
+    role: u.role as 'user' | 'dev',
     isBanned: u.is_banned,
-    plan: u.plan as any
+    plan: u.plan as 'free' | 'premium'
   }));
 }
 
