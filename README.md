@@ -7,12 +7,12 @@
 
 ## ⚡ Core Features
 
-### 👻 Phantom Vaults (Ephemeral)
+### 👻 Phantom Chats (Ephemeral)
 - Create temporary chat rooms with a self-destruct timer.
 - Secured by a unique **6-digit One-Time Passcode (OTP)** generated upon creation.
 - Zero trace: Once the timer hits zero, the room and its messages are purged from the memory buffers.
 
-### 🏛️ Permanent Vaults (Maker Control)
+### 🏛️ Permanent Chats (Maker Control)
 - Persistent chat rooms for long-term operations.
 - Full moderation tools for the vault creator (The Maker).
 - Secure membership management and ban protocols.
